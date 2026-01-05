@@ -1,17 +1,19 @@
 # Método de Yoshida: Simulación Gravitacional de 10 Cuerpos
 
-Este repositorio contiene una implementación del **Método de Yoshida**, un integrador simpléctico de alto orden diseñado para la simulación precisa de sistemas Hamiltonianos. Se aplica aquí para resolver la dinámica de un sistema gravitacional de 10 cuerpos en interacción mutua.
+Este repositorio contiene una implementación del **Método de Yoshida**, un integrador de alto orden diseñado para la simulación precisa de sistemas Hamiltonianos. Se aplica aquí para resolver la dinámica de un sistema gravitacional de 10 cuerpos en interacción mutua.
 
 
 
-## Descripción Teórica
-A diferencia de los métodos de integración estándar (como Runge-Kutta), el algoritmo de Yoshida preserva la estructura simpléctica del espacio de fases. Esto garantiza que errores en la energía total del sistema no crezcan linealmente con el tiempo, permitiendo integraciones estables en simulaciones de largo plazo.
+## 🌌 Descripción Teórica
+A diferencia de los métodos de integración estándar (como Runge-Kutta), el algoritmo de Yoshida preserva la estructura del espacio de fases. Esto garantiza que los errores en la energía total del sistema no crezcan linealmente con el tiempo, permitiendo integraciones estables y precisas en simulaciones de largo plazo.
+
+El integrador se basa en la técnica de composición desarrollada por **Haruo Yoshida**, donde un integrador básico de salto de rana (*leapfrog*) se aplica a varios intervalos de tiempo específicos. Al utilizar la secuencia correcta de pasos, los errores de orden inferior se compensan, permitiendo generar fácilmente un integrador de 4º orden.
 
 ### Características principales:
-* **Integrador Simpléctico:** Implementación de 4º orden.
-* **Estabilidad Térmica:** Conservación del Hamiltoniano (Energía total).
-* **N-Body Problem:** Dinámica orbital de 10 cuerpos con interacción gravitatoria.
-* **Visualización:** Herramientas para generar animaciones 3D de las trayectorias.
+* **Integrador de Alto Orden:** Implementación de 4º orden basada en coeficientes de Yoshida.
+* **Conservación de Energía:** Estabilidad superior del Hamiltoniano frente a métodos no conservativos.
+* **Problema de N-cuerpos:** Modelado de 10 cuerpos con interacción gravitatoria completa.
+* **Visualización:** Generación de animaciones 3D de las trayectorias mediante **PyVista** y **Matplotlib**.
 
 ---
 
